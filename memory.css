@@ -1,33 +1,47 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: 'Comic Sans MS', cursive;
+  margin: 0;
+  padding: 0;
 }
 
+/* Background Styling */
 .background {
   background: linear-gradient(135deg, #fc5bc1, #6a11cb);
+  min-height: 100vh;
 }
 
+/* Heading */
 .heading {
   color: white;
   font-size: 3rem;
   text-shadow: 2px 2px #ff69b4;
+  text-align: center;
 }
 
+/* Game Board */
 .board {
   display: grid;
-  grid-template-columns: repeat(5, 80px);
-  grid-template-rows: repeat(4, 80px);
+  grid-template-columns: repeat(5, 1fr);
   gap: 15px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* Card Styling */
 .card {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   perspective: 1000px;
-  overflow:hidden;
-  border-radius:15px;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 .front, .back {
@@ -35,7 +49,7 @@ body {
   width: 100%;
   height: 100%;
   box-shadow: 0 0 5px #00000088;
-  border-radius:15px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,6 +76,7 @@ body {
   transform: rotateY(360deg);
 }
 
+/* Button Styling */
 .custom-btn {
   background-color: #fc5bc1;
   color: white;
@@ -79,4 +94,44 @@ body {
 
 .btn {
   margin: 10px;
+}
+
+/* Instructions Modal */
+.modal-content {
+  border-radius: 15px;
+}
+.modal-header {
+  background-color: #fc5bc1;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.modal-title {
+  color: white;
+}
+.close {
+  color: white;
+  opacity: 1;
+}
+.modal-body {
+  font-family: 'Comic Sans MS', cursive;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 2.2rem;
+    padding: 10px;
+  }
+  .board {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 300px;
+    gap: 10px;
+  }
+  .front, .back {
+    font-size: 1.5rem;
+  }
+  .custom-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
 }
