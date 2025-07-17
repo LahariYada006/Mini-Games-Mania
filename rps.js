@@ -57,5 +57,5 @@ window.addEventListener("click", (e) => {
 
 // Back button logic
 backBtn.addEventListener("click", () => {
-  window.location.href = "first.html";
+  window.location.href = "index.html";
 });
