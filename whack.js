@@ -97,7 +97,7 @@ function closeInstructions() {
   document.getElementById("overlay").style.display = "none";
 }
 function goBack() {
-  window.location.href = "first.html";
+  window.location.href = "index.html";
 }
 
 window.addEventListener("mousemove", (e) => {
