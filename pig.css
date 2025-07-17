@@ -3,66 +3,66 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
 }
 
 body {
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   min-height: 100vh;
-  color: #333;
   background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  color: #333;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 20px;
-  overflow-y: auto;
+  align-items: center;
+  padding: 2rem;
 }
 
-/* Layout Container */
+/* ========== MAIN LAYOUT ========== */
 main {
-  position: relative;
   width: 100%;
   max-width: 1000px;
-  height: auto;
   background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(200px);
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
   border-radius: 9px;
   overflow: hidden;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   display: flex;
-  flex-direction: column;
-  padding-bottom: 80px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 1.5rem;
 }
 
-/* Player Sections */
+/* ========== PLAYER SECTION ========== */
 .player {
-  padding: 5rem 3rem;
+  flex: 1 1 45%;
+  min-width: 280px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
+  text-align: center;
   transition: all 0.75s;
 }
 
 .name {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 .score {
-  font-size: 6rem;
+  font-size: clamp(4rem, 6vw, 6rem);
   font-weight: 300;
   color: #c7365f;
-  margin-bottom: auto;
 }
 
 .player--active {
@@ -75,70 +75,70 @@ main {
   font-weight: 400;
 }
 
-/* Current Score Box */
+/* ========== CURRENT BOX ========== */
 .current {
   background-color: #c7365f;
   opacity: 0.8;
   border-radius: 9px;
   color: #fff;
-  width: 80%;
-  max-width: 250px;
+  width: 100%;
+  max-width: 220px;
   padding: 1.5rem;
-  text-align: center;
   margin-top: 2rem;
 }
 
 .current-label {
   text-transform: uppercase;
-  margin-bottom: 1rem;
   font-size: 1.6rem;
   color: #ddd;
 }
 
 .current-score {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
-/* Dice Image */
+/* ========== DICE ========== */
 .dice {
-  position: relative;
-  margin: 2rem auto;
   display: block;
-  height: 10rem;
-  max-width: 80%;
+  margin: 2rem auto 1rem;
+  height: auto;
+  width: 20vw;
+  max-width: 120px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
-/* Buttons */
+/* ========== BUTTONS ========== */
 .btn {
   display: block;
-  width: auto;
+  width: 100%;
   max-width: 250px;
-  margin: 1.2rem auto;
+  margin: 1rem auto;
+  font-size: 1.6rem;
   color: #444;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-  font-family: inherit;
-  font-size: 1.8rem;
   text-transform: uppercase;
-  cursor: pointer;
-  padding: 0.7rem 2.5rem;
-  border-radius: 50rem;
-  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
   border: none;
+  border-radius: 50rem;
+  padding: 0.8rem 2.5rem;
+  cursor: pointer;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
   text-align: center;
 }
+
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.8);
   transform: scale(1.05);
-  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.2);
-}
-.btn::first-letter {
-  font-size: 2.4rem;
 }
 
-/* Winner Styling */
+.btn::first-letter {
+  font-size: 2rem;
+}
+
+/* ========== WINNER STYLING ========== */
 .player--winner {
   background-color: #2f2f2f;
 }
@@ -147,19 +147,11 @@ main {
   color: #c7365f;
 }
 
-/* Hide Element */
-.hidden {
-  display: none;
-}
-
-/* Modal Styling */
+/* ========== MODAL ========== */
 .modal {
   position: fixed;
   z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
   display: flex;
@@ -177,15 +169,12 @@ main {
 
 .modal-content {
   background-color: #fff;
-  padding: 2rem 3rem;
+  padding: 2rem;
   border-radius: 12px;
   width: 90%;
   max-width: 450px;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
   color: #333;
   font-size: 1.6rem;
-  line-height: 1.4;
-  text-align: left;
 }
 
 .modal-content h2 {
@@ -195,12 +184,12 @@ main {
 }
 
 .modal-content ul {
-  padding-left: 1.4rem;
+  padding-left: 1.6rem;
   margin-bottom: 1.6rem;
 }
 
-.modal-content ul li {
-  margin-bottom: 0.7rem;
+.modal-content li {
+  margin-bottom: 0.8rem;
 }
 
 /* Modal Buttons */
@@ -228,30 +217,23 @@ main {
   color: #444;
 }
 
-/* 📱 Mobile Optimization */
+/* ========== FULLY RESPONSIVE ========== */
 @media screen and (max-width: 768px) {
   main {
     flex-direction: column;
+    align-items: center;
     padding: 2rem;
   }
   .player {
-    padding: 3rem 2rem;
-  }
-  .score {
-    font-size: 5rem;
-  }
-  .name {
-    font-size: 2.5rem;
-  }
-  .current-score {
-    font-size: 2.5rem;
+    width: 100%;
+    padding: 1.5rem;
   }
   .dice {
-    height: 8rem;
+    width: 25vw;
+    max-width: 100px;
   }
   .btn {
-    font-size: 1.6rem;
-    padding: 0.6rem 2rem;
+    font-size: 1.4rem;
     max-width: 200px;
   }
 }
