@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="guess.css" />
+</head>
+<body>
+    <body>
+  <div class="container">
+    <h1>🎯 Guess the Number</h1>
+
+    <div class="game-box">
+      <p>Start guessing the number!</p>
+      <input type="number" id="guessInput" placeholder="Enter your guess" />
+      <button class="btn" id="checkBtn">Check</button>
+
+      <p id="resultMsg"></p>
+
+      <div class="score-container">
+        <p>Score: <span id="score">20</span></p>
+        <p>High Score: <span id="highScore">0</span></p>
+      </div>
+
+      <div class="btn-group">
+        <button class="btnn" id="resetBtn">Reset Game</button>
+        <button class="btnn" id="instructionsBtn">Instructions</button>
+        <a href="first.html" class="btnn">Back</a>
+      </div>
+    </div>
+  </div>
+   <div id="instructionModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>📋 Instructions</h2>
+      <p>🔢 Guess a number between 1 and 25.</p>
+      <p>💡 You start with 20 points.</p>
+      <p>❌ Each wrong guess reduces 1 point.</p>
+      <p>🏆 Try to get the highest score!</p>
+    </div>
+  </div>
+</body>
+<script
+    type="text/javascript"
+    src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"
+  ></script>
+<script src="guess.js"></script>
+</html>

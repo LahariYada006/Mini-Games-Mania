@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.background {
+  background: linear-gradient(135deg, #fc5bc1, #6a11cb);
+}
+
+.heading {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px #ff69b4;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: repeat(4, 80px);
+  gap: 15px;
+}
+
+.card {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  perspective: 1000px;
+  overflow:hidden;
+  border-radius:15px;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 5px #00000088;
+  border-radius:15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.front {
+  background-color: white;
+}
+
+.back {
+  background-color: #fc5bc1;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+  transform: rotateY(360deg);
+}
+
+.custom-btn {
+  background-color: #fc5bc1;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px #00000033;
+  border: none;
+}
+
+.custom-btn:hover {
+  background-color: #ff85d1;
+  color: white;
+}
+
+.btn {
+  margin: 10px;
+}

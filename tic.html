@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="tic.css" />
+  </head>
+  <body>
+    <div
+      class="background d-flex flex-column align-items-center justify-content-center min-vh-100"
+    >
+      <h1 class="heading">Tic Tac Toe</h1>
+      <p id="turn" class="text-white font-weight-bold">Player O's Turn</p>
+
+      <div class="board mt-3">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+      </div>
+
+      <div
+        id="instructions"
+        class="instructions mt-3 text-white"
+        style="display: none"
+      >
+        Click on an empty square to place your mark. First to get 3 in a row
+        wins!
+      </div>
+
+      <!-- Buttons -->
+      <div class="text-center mt-4 button-group-custom">
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+          <button class="btn custom-btn mb-2 me-2" id = "newGame" onclick="newGame()">
+            New Game
+          </button>
+          <!-- Instructions Modal Trigger Button -->
+<button
+  type="button"
+  class="btn custom-btn mb-2 me-2"
+  data-toggle="modal"
+  data-target="#instructionsModal"
+>
+  Instructions
+</button>
+
+<!-- Modal Structure -->
+<div
+  class="modal fade"
+  id="instructionsModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="instructionsModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="border-radius: 15px;">
+      <div class="modal-header" style="background-color: #fc5bc1; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+        <h5 class="modal-title text-white" id="instructionsModalLabel">How to Play</h5>
+        <button
+          type="button"
+          class="close text-white"
+          data-dismiss="modal"
+          aria-label="Close"
+          style="opacity: 1;"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="font-family: 'Comic Sans MS', cursive;">
+        <ul style="list-style: disc; padding-left: 20px;">
+          <li>Two players take turns placing X or O.</li>
+          <li>The first to align 3 in a row </br> (horizontally, vertically, or diagonally) wins.</li>
+          <li>If all 9 cells are filled with no winner, </br>the game is a draw.</li>
+          <li>Click "New Game" to reset the board.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn custom-btn"
+          data-dismiss="modal"
+        >
+          Got it!
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="mt-2">
+          <a href="first.html" class="btn custom-btn">Back</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"
+  ></script>
+  <script src="tic.js"></script>
+</html>

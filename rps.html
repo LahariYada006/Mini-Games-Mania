@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rps.css" />
+  </head>
+  <body>
+    <main class="game-container">
+      <h1 class="title">Rock Paper Scissors</h1>
+
+      <div class="choices">
+        <img
+          src="images/rock.png"
+          alt="Rock"
+          class="choice"
+          data-choice="rock"
+        />
+        <img
+          src="images/paper.png"
+          alt="Paper"
+          class="choice"
+          data-choice="paper"
+        />
+        <img
+          src="images/scissors.png"
+          alt="Scissors"
+          class="choice"
+          data-choice="scissors"
+        />
+      </div>
+
+      <div class="result">
+        <p id="user-choice">You chose: -</p>
+        <p id="computer-choice">Computer chose: -</p>
+        <h2 id="winner-text">Result: -</h2>
+      </div>
+
+      <button class="btn btn--instructions">Instructions</button>
+      <button class="btn btn--back">Back</button>
+
+      <!-- Instructions Modal -->
+      <div id="instructions-modal" class="modal">
+        <div class="modal-content"> 
+         <span id="closeModal" class="close">&times;</span>
+
+          <h2>Instructions</h2>
+          <ul>
+            <li>Click on Rock, Paper, or Scissors to make your choice.</li>
+            <li>The computer will randomly choose one too.</li>
+            <li>
+              Rock beats Scissors, Scissors beats Paper, Paper beats Rock.
+            </li>
+            <li>The result will be shown after each round.</li>
+          </ul>
+          
+        </div>
+      </div>
+    </main>
+
+    <script src="rps.js"></script>
+  </body>
+</html>

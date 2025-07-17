@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="memory.css" />
+</head>
+<body>
+  <div class="container-fluid d-flex flex-column align-items-center justify-content-center min-vh-100 background">
+    <h1 class="heading">Memory Game</h1>
+    <div id="game-board" class="board mt-3"></div>
+
+    <p id="result-text" class="text-white font-weight-bold mt-3"></p>
+
+    <!-- Buttons -->
+    <div class="text-center mt-4 button-group-custom">
+      <div class="d-flex justify-content-center flex-wrap gap-3">
+        <button class="btn custom-btn mb-2 me-2" onclick="startGame()">New Game</button>
+        <button class="btn custom-btn mb-2 me-2" data-toggle="modal" data-target="#instructionsModal">Instructions</button>
+      </div>
+      <div class="mt-2">
+        <a href="first.html" class="btn custom-btn">Back</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instructions Modal -->
+  <div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" style="border-radius: 15px;">
+        <div class="modal-header" style="background-color: #fc5bc1; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+          <h5 class="modal-title text-white" id="instructionsModalLabel">How to Play</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" style="opacity: 1;">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="font-family: 'Comic Sans MS', cursive;">
+          <ul>
+            <li>Click on two cards to flip them.</li>
+            <li>If they match, they stay revealed.</li>
+            <li>If not, they flip back over.</li>
+            <li>Find all pairs to win!</li>
+            <li>Challenge yourself by finishing fast!</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn custom-btn" data-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="memory.js"></script>
+</body>
+</html>

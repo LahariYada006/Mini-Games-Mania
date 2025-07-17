@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  background: linear-gradient(135deg, #fc5bc1, #6a11cb);
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.heading {
+  color: white;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  padding-top: 1rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-shadow: 2px 2px 4px #880e4f;
+}
+
+.game-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.game-card {
+  background-color: #ffffff20;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px #00000030;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.game-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.game-card h3 {
+  margin: 10px 0;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.play-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #fc5bc1;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.play-btn:hover {
+  background-color: #fc5bc1;
+  color: white;
+}

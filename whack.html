@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack A Mole</title>
+    <link rel="stylesheet" href="whack.css" />
+  </head>
+  <body>
+    <div id="overlay">
+      <div class="popup">
+        <h2>Instructions</h2>
+        <p>
+          Click on the mole to score points.<br />Clicking a bomb ends the game!
+        </p>
+        <button onclick="closeInstructions()">Close</button>
+      </div>
+    </div>
+
+    <h1 class="scoree">WHACK A MOLE</h1>
+    <h1 class="score">SCORE: <span id="score">00</span></h1>
+
+    <div class="buttons">
+      <button onclick="startGame()">Start</button>
+      <button onclick="showInstructions()">Instructions</button>
+      <button onclick="goBack()">Back</button>
+    </div>
+
+    <div class="board">
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+    </div>
+
+    <div class="cursor"></div>
+    <script src="whack.js"></script>
+  </body>
+</html>
