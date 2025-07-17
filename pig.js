@@ -103,5 +103,5 @@ instructionsModal.addEventListener("click", (e) => {
 });
 
 document.querySelector(".btn--back").addEventListener("click", () => {
-  window.location.href = "first.html"; // Or any page you want to go to
+  window.location.href = "index.html"; // Or any page you want to go to
 });
