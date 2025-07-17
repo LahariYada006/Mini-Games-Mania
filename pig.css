@@ -168,6 +168,7 @@ main {
 }
 
 /* Modal Styling */
+/* Modal Background Styling */
 .modal {
   position: fixed;
   z-index: 1000;
@@ -185,38 +186,57 @@ main {
   transition: opacity 0.3s ease;
 }
 
+/* Show the Modal */
 .modal.show {
   visibility: visible;
   opacity: 1;
 }
 
+/* Modal Box Styling */
 .modal-content {
-  background-color: #fff;
-  padding: 2rem 3rem;
-  border-radius: 12px;
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
   width: 90%;
-  max-width: 450px;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-  color: #333;
+  max-width: 520px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+  color: #2c3e50;
   font-size: 1.6rem;
-  line-height: 1.4;
+  line-height: 1.5;
   text-align: left;
 }
 
+/* Modal Title */
 .modal-content h2 {
   color: #8e44ad;
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
   text-align: center;
+  font-size: 2rem;
 }
 
+/* Modal List */
 .modal-content ul {
-  padding-left: 1.4rem;
-  margin-bottom: 1.6rem;
+  padding-left: 1.6rem;
+  margin-bottom: 1.8rem;
 }
 
 .modal-content ul li {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.8rem;
 }
+
+/* Optional: Close Button Styling */
+.modal-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.6rem;
+  font-size: 1.6rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #8e44ad;
+}
+
+
 
 /* Modal Buttons */
 .btn-close,
