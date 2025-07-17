@@ -112,12 +112,26 @@ main {
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
-/* Buttons */
+/* Buttons Container */
+.buttons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Individual Buttons */
 .btn {
   display: block;
   width: auto;
   max-width: 250px;
-  margin: 1.2rem auto;
+  min-width: 180px;
+  margin: 0.5rem 0;
   color: #444;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
@@ -129,16 +143,15 @@ main {
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
   border: none;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
   text-align: center;
 }
+
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.8);
   transform: scale(1.05);
 }
-.btn::first-letter {
-  font-size: 2.4rem;
-}
+
 
 /* Winner Styling */
 .player--winner {
