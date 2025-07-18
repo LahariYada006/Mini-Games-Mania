@@ -271,6 +271,7 @@ main {
     flex-wrap: nowrap;
     width: 1000px;
     overflow-x: auto;
+    padding-bottom:150px;
   }
 
   .player {
@@ -279,6 +280,9 @@ main {
 
   .btn {
     font-size: 1.6rem;
+  }
+  .btn-group{
+    bottom:1rem;
   }
 
   .dice {
