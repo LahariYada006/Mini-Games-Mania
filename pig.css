@@ -125,6 +125,7 @@ main {
   align-items: center;
   gap: 1rem;
   z-index: 2;
+  margin-top:10px:
 }
 
 .button-group .row {
