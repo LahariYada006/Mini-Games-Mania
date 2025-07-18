@@ -39,7 +39,7 @@ boxes.forEach((box) => {
 
 const enableboxes = () => {
   for (let box of boxes) {
-    box.disaled = false;
+    box.disabled = false;
     box.innerText = "";
   }
 };
